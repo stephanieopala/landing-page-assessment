@@ -1,0 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --font-color: #403B3B;
+  --primary-color: #D24444;
+}
+
+header {
+  padding-top: 25px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0px 140px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logo span {
+  color: var(--primary-color);
+}
+
+.navigation ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.nav__item {
+  margin-right: 50px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.nav__item:last-of-type {
+  margin-right: 0;
+}
+
+.nav__link {
+  text-decoration: none;
+  color: var(--font-color);
+  font-size: 20px;
+}
+
+.nav__link:hover {
+  color: var(--primary-color);
+}
+
+.home {
+  padding: 0px 140px;
+}
+
+.home__desc {
+  position: absolute;
+  top: 275px;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+.home__btn {
+  position: absolute;
+  top: 540px;
+  padding: 15px 80px;
+  border: 1px solid var(--primary-color);
+  border-radius: 40px;
+  background-color: var(--primary-color);
+  color: var(--font-color);
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
