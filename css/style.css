@@ -11,6 +11,15 @@
   --primary-color: #D24444;
 }
 
+body {
+  padding: 0px 140px;
+  background-image: url(../Images/flowerbasket-lg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 header {
   padding-top: 25px;
 }
@@ -21,7 +30,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0px 140px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -39,11 +47,12 @@ header {
   color: var(--primary-color);
 }
 
-.navigation ul {
+.nav__list {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 100%;
 }
 
 .nav__item {
@@ -66,8 +75,23 @@ header {
   color: var(--primary-color);
 }
 
-.home {
-  padding: 0px 140px;
+.toggle {
+  background-image: url(../Images/menu.png);
+  width: 60px;
+  height: 60px;
+  background-color: #a81c1c;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: none;
+  z-index: 15;
+}
+
+.toggle.active {
+  background-image: url(../Images/close.png);
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 15;
 }
 
 .home__desc {
@@ -88,5 +112,81 @@ header {
   font-size: 25px;
   font-weight: 600;
   text-decoration: none;
+}
+
+.home__btn:hover {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 30px;
+    background-image: url(../Images/flowerbasket-sm.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  .toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navigation {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: var(--primary-color);
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: none;
+  }
+  .navigation.active {
+    display: block;
+  }
+  .nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .nav__item {
+    margin-right: 0;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+  .home {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .home__desc {
+    font-size: 30px;
+    text-align: center;
+    top: 140px;
+    line-height: 60px;
+  }
+  .home__btn {
+    font-size: 20px;
+    top: 432px;
+    text-align: center;
+    padding: 18px 70px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
